@@ -1,5 +1,5 @@
 <template>
   <div class="settings">
-    <h1>Settings</h1>
+    <h1 class="ibmPS">Settings</h1>
   </div>
 </template>
