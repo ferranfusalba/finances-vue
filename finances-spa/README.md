@@ -1,4 +1,4 @@
-# finances-vue
+# finances-spa
 
 ## Project setup
 ```
