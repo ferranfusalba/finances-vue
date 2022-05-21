@@ -1,2 +1,8 @@
-# getfinances
+# Finances
 http://getfinances.app
+
+|-- finances-vue
+    |-- finances-public
+    |-- finances-pwa
+|-- finances-app
+|-- finances-inc
