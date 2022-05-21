@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+    <h1>{{ h1 }}</h1>
+    <h4>{{h4}}</h4>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
@@ -122,7 +123,7 @@
           >awesome-vue</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -131,11 +132,13 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    msg: String,
+    h1: String,
+    h4: String,
   },
 })
 export default class HelloWorld extends Vue {
-  msg!: string;
+  h1!: string;
+  h4!: string;
 }
 </script>
 
