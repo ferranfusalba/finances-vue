@@ -3,7 +3,7 @@ http://getfinances.app
 
 ```bash
 |-- finances-vue
-    |-- finances-public
-    |-- finances-pwa
-|-- finances-app
-|-- finances-inc
+    |-- finances-public (Nuxt, SSG)
+    |-- finances-pwa (Vue, PWA)
+|-- [finances-app](https://github.com/ferranfusalba/finances-app) (Swift)
+|-- finances-inc (C)
