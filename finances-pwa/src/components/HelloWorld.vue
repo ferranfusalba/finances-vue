@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ h1 }}</h1>
     <h4>{{h4}}</h4>
+    <a href="https://getfinances.app/" target="_blank">Public</a>
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the

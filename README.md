@@ -1,5 +1,8 @@
 # Finances
 
+[Public](https://getfinances.app/)
+[PWA](https://app.getfinances.app/)
+
 ```bash
 |-- finances-vue
     |-- finances-public (Nuxt, SSG)
