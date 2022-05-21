@@ -1,5 +1,4 @@
 # Finances
-[WIP](https://www.getfinances.app/)
 
 ```bash
 |-- finances-vue
