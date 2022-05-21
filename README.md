@@ -1,5 +1,5 @@
 # Finances
-http://getfinances.app
+[WIP](https://www.getfinances.app/)
 
 ```bash
 |-- finances-vue
