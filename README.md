@@ -1,6 +1,7 @@
 # Finances
 http://getfinances.app
 
+```bash
 |-- finances-vue
     |-- finances-public
     |-- finances-pwa
