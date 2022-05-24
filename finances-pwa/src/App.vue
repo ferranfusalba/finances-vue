@@ -4,11 +4,18 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
+    <div id="bottom">
+      
+
+      
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+@import "./styles/carbon";
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
