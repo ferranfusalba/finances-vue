@@ -8,9 +8,9 @@
 // import Form from '@/components/Form.vue'
 
 export default {
-  name: 'Data',
+  name: "Data",
   components: {
     // Form
-  }
-}
+  },
+};
 </script>

@@ -1,20 +1,15 @@
 <template>
   <nav>
-    <TabBarSection to="/" title="Home">
-        <component :is="home20"></component>
-    </TabBarSection>
-    <TabBarSection to="/global" title="Global">
-        <component :is="globe20"></component>
-    </TabBarSection>
-    <TabBarSection to="/accounts" title="Accounts">
-        <component :is="currency20"></component>
-    </TabBarSection>
-    <TabBarSection to="/data" title="Data">
-        <component :is="chartLineData20"></component>
-    </TabBarSection>
-    <TabBarSection to="/settings" title="Settings">
-        <component :is="settings20"></component>
-    </TabBarSection>
+    <div
+      v-for="item in sections"
+      :key="item.id"
+      @click="activate(item.id)"
+      :class="{ active: active_el == item.id }"
+    >
+      <TabBarSection :to="item.to" :title="item.title">
+        <component :is="item.iconComponent"></component>
+      </TabBarSection>
+    </div>
   </nav>
 </template>
 
@@ -25,13 +20,41 @@ export default {
   name: "TabBar",
   data() {
     return {
-      clicked: Boolean,
-      home20: 'Home20',
-      globe20: 'Globe20',
-      currency20: 'Currency20',
-      chartLineData20: 'ChartLineData20',
-      settings20: 'Settings20',
+      sections: [
+        { id: "1", to: "/", title: "Home", iconComponent: "Home20" },
+        {
+          id: "2",
+          to: "/global",
+          title: "Global",
+          iconComponent: "Globe20",
+        },
+        {
+          id: "3",
+          to: "/accounts",
+          title: "Accounts",
+          iconComponent: "Currency20",
+        },
+        {
+          id: "4",
+          to: "/data",
+          title: "Data",
+          iconComponent: "ChartLineData20",
+        },
+        {
+          id: "5",
+          to: "/settings",
+          title: "Settings",
+          iconComponent: "Settings20",
+        },
+      ],
+      active_el: 0,
     };
+  },
+  methods: {
+    activate: function (el) {
+      this.active_el = el;
+      console.log(el);
+    },
   },
   components: {
     TabBarSection,
@@ -49,11 +72,21 @@ nav {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  background-color: white;
   a {
     text-decoration: none;
     color: black;
     height: 100%;
+  }
+  div {
+    height: 100%;
+    background-color: white;
+    color: black;
+    &.active {
+      background-color: black;
+      * {
+        color: white;
+      }
+    }
   }
 }
 </style>
