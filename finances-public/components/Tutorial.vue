@@ -10,6 +10,7 @@
       <h1 class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-2xl leading-7 font-semibold">Finances</h1>
       <h4 class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-600">Coming Soon</h4>
       <a href="https://app.getfinances.app/" target="_blank" class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-400">App</a>
+      <h6 class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-500">dev-public</h6>
        <!--
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
         <h2 class="text-2xl leading-7 font-semibold">
