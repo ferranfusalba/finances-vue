@@ -102,63 +102,23 @@
     </div>
     <router-view />
     <div class="mobile">
-      <cv-content-switcher :light="light" :size="size">
-          <cv-content-switcher-button owner-id="csb-1" :icon="icon"
-            >1</cv-content-switcher-button
-          >
-        <cv-content-switcher-button owner-id="csb-2" :icon="icon"
-          >2</cv-content-switcher-button
-        >
-        <cv-content-switcher-button owner-id="csb-1" :icon="icon"
-          >3</cv-content-switcher-button
-        >
-        <cv-content-switcher-button owner-id="csb-2" :icon="icon"
-          >4</cv-content-switcher-button
-        >
-        <cv-content-switcher-button owner-id="csb-1" :icon="icon"
-          >5</cv-content-switcher-button
-        >
-      </cv-content-switcher>
-
-      <!--
-      <cv-content-switcher :light="light" :size="size">
-        <cv-content-switcher-button
-          owner-id="csb-1"
-          :selected="isSelected(0)"
-          :icon="icon"
-          >Button Name 1</cv-content-switcher-button
-        >
-        <cv-content-switcher-button
-          owner-id="csb-2"
-          :selected="isSelected(1)"
-          :icon="icon"
-          >Button Name 2</cv-content-switcher-button
-        >
-        <cv-content-switcher-button
-          owner-id="csb-3"
-          :selected="isSelected(2)"
-          v-if="toggle3"
-          :toggle3="toggle3"
-          :disabled="disabled3"
-          :icon="icon"
-          >Button Name 3</cv-content-switcher-button
-        >
-      </cv-content-switcher>
-
-      <section style="margin: 10px 0">
-        <cv-content-switcher-content owner-id="csb-1">
-          <p>This is the content for option 1</p>
-        </cv-content-switcher-content>
-        <cv-content-switcher-content owner-id="csb-2">
-          <p>This is the content for option 2</p>
-        </cv-content-switcher-content>
-        <cv-content-switcher-content owner-id="csb-2">
-          <p>This is more content for option 2</p>
-        </cv-content-switcher-content>
-        <cv-content-switcher-content owner-id="csb-3">
-          <p>This is the content for option 3</p>
-        </cv-content-switcher-content>
-      </section> -->
+      <nav>
+        <div>
+          <router-link to="/">Home</router-link>
+        </div>
+        <div>
+          <router-link to="/">Accounts</router-link>
+        </div>
+        <div>
+          <router-link to="/">New</router-link>
+        </div>
+        <div>
+          <router-link to="/">This Month</router-link>
+        </div>
+        <div>
+          <router-link to="/">Settings</router-link>
+        </div>
+      </nav>
     </div>
   </div>
 </template>
@@ -169,7 +129,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
@@ -192,6 +152,21 @@ export default {
     bottom: 0;
     width: 100vw;
     background-color: white;
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      border-top: 1px solid black;
+      height: 40px;
+      align-items: center;
+      font-size: 11px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      div:nth-child(n+2) {
+        border-left: 1px solid gray;
+      }
+    }
   }
 }
 </style>
