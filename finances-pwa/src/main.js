@@ -20,6 +20,12 @@ import App from './App.vue'
 import 'carbon-components/css/carbon-components.css';
 // import './_carbon.scss'
 import CarbonComponentsVue from '@carbon/vue/src/index';
+import { CarbonIconsVue } from '@carbon/icons-vue';
+import Home20 from '@carbon/icons-vue/es/home/20';
+import Globe20 from '@carbon/icons-vue/es/globe/20';
+import Currency20 from '@carbon/icons-vue/es/currency/20';
+import ChartLineData20 from '@carbon/icons-vue/es/chart--line--data/20';
+import Settings20 from '@carbon/icons-vue/es/settings/20';
 // import '@carbon/ibmdotcom-web-components/es/components/footer/index';
 import {
   // white,
@@ -34,7 +40,15 @@ import {
 
 Vue.config.productionTip = false
 
-Vue.use(CarbonComponentsVue).use(router).use(store);
+Vue.use(CarbonComponentsVue).use(CarbonIconsVue, {
+  components: {
+    Home20,
+    Globe20,
+    Currency20,
+    ChartLineData20,
+    Settings20,
+  }
+}).use(router).use(store);
 
 new Vue({
   el: "#app",

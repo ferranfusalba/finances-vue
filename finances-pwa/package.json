@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.49.1",
     "@carbon/themes": "^10.40.0",
     "@carbon/vue": "^2.40.0",
     "carbon-components": "^10.41.0",

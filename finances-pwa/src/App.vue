@@ -9,26 +9,31 @@
         <cv-skip-to-content href="#main-content">
           Skip to content
         </cv-skip-to-content>
-        <cv-header-name to="/"> Finances </cv-header-name>
+        <cv-header-name to="/">Finances</cv-header-name>
         <cv-header-nav aria-label="Carbon nav">
-          <cv-header-menu-item href="javascript:void(0)">
-            Link 1
-          </cv-header-menu-item>
-          <cv-header-menu-item href="javascript:void(0)">
-            Link 2
-          </cv-header-menu-item>
-          <cv-header-menu-item href="javascript:void(0)">
-            Link 3
-          </cv-header-menu-item>
-          <cv-header-menu aria-label="Link 4" title="Link 4">
+          <cv-header-menu-item to="/global"> Global </cv-header-menu-item>
+          <cv-header-menu aria-label="Accounts" title="Accounts">
+            <cv-header-menu-item to="/accounts"> Overview </cv-header-menu-item>
+            <cv-header-menu-item to="/accounts/1">
+              Account 1
+            </cv-header-menu-item>
+            <cv-header-menu-item to="/accounts/2">
+              Account 2
+            </cv-header-menu-item>
+            <cv-header-menu-item to="/accounts/3">
+              Account 3
+            </cv-header-menu-item>
+          </cv-header-menu>
+          <cv-header-menu aria-label="Data" title="Data">
+            <cv-header-menu-item to="/data"> Overview </cv-header-menu-item>
             <cv-header-menu-item href="javascript:void(0)">
-              Submenu Link 1
+              by Month
             </cv-header-menu-item>
             <cv-header-menu-item href="javascript:void(0)">
-              Submenu Link 2
+              by Year
             </cv-header-menu-item>
             <cv-header-menu-item href="javascript:void(0)">
-              Submenu Link 3
+              All graphics
             </cv-header-menu-item>
           </cv-header-menu>
         </cv-header-nav>
@@ -104,19 +109,24 @@
     <div class="mobile">
       <nav>
         <div>
+          <Home20 />
           <router-link to="/">Home</router-link>
         </div>
         <div>
-          <router-link to="/">Accounts</router-link>
+          <Globe20 />
+          <router-link to="/global">Global</router-link>
         </div>
         <div>
-          <router-link to="/">New</router-link>
+          <Currency20 />
+          <router-link to="/accounts">Accounts</router-link>
         </div>
         <div>
-          <router-link to="/">This Month</router-link>
+          <ChartLineData20 />
+          <router-link to="/data">Data</router-link>
         </div>
         <div>
-          <router-link to="/">Settings</router-link>
+          <Settings20 />
+          <router-link to="/settings">Settings</router-link>
         </div>
       </nav>
     </div>
@@ -131,7 +141,6 @@ export default {
 
 <style lang="scss">
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -156,15 +165,20 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       border-top: 1px solid black;
-      height: 40px;
+      height: 60px;
       align-items: center;
       font-size: 11px;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      div:nth-child(n+2) {
-        border-left: 1px solid gray;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80%;
+        a {
+          text-decoration: none;
+          color: black;
+          // margin: 8px;
+        }
       }
     }
   }
