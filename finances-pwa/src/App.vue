@@ -108,26 +108,36 @@
     <router-view />
     <div class="mobile">
       <nav>
-        <div>
-          <Home20 />
-          <router-link to="/">Home</router-link>
-        </div>
-        <div>
-          <Globe20 />
-          <router-link to="/global">Global</router-link>
-        </div>
-        <div>
-          <Currency20 />
-          <router-link to="/accounts">Accounts</router-link>
-        </div>
-        <div>
-          <ChartLineData20 />
-          <router-link to="/data">Data</router-link>
-        </div>
-        <div>
-          <Settings20 />
-          <router-link to="/settings">Settings</router-link>
-        </div>
+        <router-link to="/">
+          <div>
+            <Home20 />
+            <p>Home</p>
+          </div>
+        </router-link>
+        <router-link to="/global">
+          <div>
+            <Globe20 />
+            <p>Global</p>
+          </div>
+        </router-link>
+        <router-link to="/accounts">
+          <div>
+            <Currency20 />
+            <p>Accounts</p>
+          </div>
+        </router-link>
+        <router-link to="/data">
+          <div>
+            <ChartLineData20 />
+            <p>Data</p>
+          </div>
+        </router-link>
+        <router-link to="/settings">
+          <div>
+            <Settings20 />
+            <p>Settings</p>
+          </div>
+        </router-link>
       </nav>
     </div>
   </div>
@@ -167,18 +177,20 @@ export default {
       border-top: 1px solid black;
       height: 60px;
       align-items: center;
-      font-size: 11px;
-      div {
+      a {
+        text-decoration: none;
+        color: black;
+        height: 100%;
+        div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 80%;
-        a {
-          text-decoration: none;
-          color: black;
-          // margin: 8px;
+        height: 100%;
+        p {
+          font-size: 11px;
         }
+      }
       }
     }
   }
