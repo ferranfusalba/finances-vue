@@ -35,7 +35,7 @@
                 <cv-button>Submit</cv-button>
             </cv-form>
         </div>
-        <dds-footer-container size="short"></dds-footer-container>
+        <!-- <dds-footer-container size="short"></dds-footer-container> -->
     </div>
 </template>
 

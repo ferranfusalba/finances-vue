@@ -14,6 +14,8 @@ new Vue({
  */
 
 import Vue from 'vue'
+import router from './router'
+import store from './store'
 import App from './App.vue'
 import 'carbon-components/css/carbon-components.css';
 // import './_carbon.scss'
@@ -32,9 +34,11 @@ import {
 
 Vue.config.productionTip = false
 
-Vue.use(CarbonComponentsVue);
+Vue.use(CarbonComponentsVue).use(router).use(store);
 
 new Vue({
+  el: "#app",
+  router: router,
   render: h => h(App),
 }).$mount('#app')
 
