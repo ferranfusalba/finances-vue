@@ -1,9 +1,9 @@
 <template>
     <cv-header aria-label="Carbon header">
-        <cv-header-menu-button
+        <!-- <cv-header-menu-button
           aria-label="Header menu"
           aria-controls="side-nav"
-        />
+        /> -->
         <cv-skip-to-content href="#main-content">
           Skip to content
         </cv-skip-to-content>

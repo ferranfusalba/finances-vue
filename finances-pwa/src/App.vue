@@ -43,9 +43,6 @@ export default {
   }
 }
 @media screen and (max-width: 1055px) {
-  .desktop {
-    display: none;
-  }
   .mobile {
     position: fixed;
     bottom: 0;

@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.settings {
+  padding-bottom: 70px;
+}
+</style>

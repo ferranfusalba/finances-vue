@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.accounts {
+  padding-bottom: 70px;
+}
+</style>
