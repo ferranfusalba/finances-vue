@@ -1,17 +1,11 @@
 <template>
   <div class="login">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Form />
+    <h1>Log In</h1>
   </div>
 </template>
 
 <script>
-import Form from '@/components/Form.vue'
-
 export default {
   name: 'LogIn',
-  components: {
-    Form
-  }
 }
 </script>
