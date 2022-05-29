@@ -12,7 +12,11 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.49.1",
+    "@carbon/themes": "^11.3.0",
+    "@carbon/vue": "^2.44.0",
     "@nuxtjs/axios": "^5.13.6",
+    "carbon-components": "^10.56.0",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
