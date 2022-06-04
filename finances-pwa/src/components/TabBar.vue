@@ -55,9 +55,35 @@ export default {
       this.active_el = el;
       console.log(el);
     },
+    testingConsole: function () {
+      console.log("beforeMount");
+    },
+    initialTabPaint: function () {
+      switch (window.location.pathname) {
+        case "/":
+          this.activate(1);
+          break;
+        case "/global":
+          this.activate(2);
+          break;
+        case "/accounts":
+          this.activate(3);
+          break;
+        case "/data":
+          this.activate(4);
+          break;
+        case "/settings":
+          this.activate(5);
+          break;
+      }
+    },
   },
   components: {
     TabBarSection,
+  },
+  beforeMount() {
+    this.testingConsole();
+    this.initialTabPaint();
   },
 };
 </script>
