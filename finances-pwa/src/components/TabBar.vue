@@ -53,27 +53,27 @@ export default {
   methods: {
     activate: function (el) {
       this.active_el = el;
-      console.log(el);
-    },
-    testingConsole: function () {
-      console.log("beforeMount");
     },
     initialTabPaint: function () {
+      let locationPathname = window.location.pathname;
+      let locationPathnamePosition2 = locationPathname.search("global");
+      let locationPathnamePosition3 = locationPathname.search("accounts");
+      let locationPathnamePosition4 = locationPathname.search("data");
+      let locationPathnamePosition5 = locationPathname.search("settings");
+
+      if (locationPathnamePosition2 == 1) {
+        this.activate(2);
+      } else if (locationPathnamePosition3 == 1) {
+        this.activate(3);
+      } else if (locationPathnamePosition4 == 1) {
+        this.activate(4);
+      } else if (locationPathnamePosition5 == 1) {
+        this.activate(5);
+      }
+
       switch (window.location.pathname) {
         case "/":
           this.activate(1);
-          break;
-        case "/global":
-          this.activate(2);
-          break;
-        case "/accounts":
-          this.activate(3);
-          break;
-        case "/data":
-          this.activate(4);
-          break;
-        case "/settings":
-          this.activate(5);
           break;
       }
     },
@@ -81,8 +81,15 @@ export default {
   components: {
     TabBarSection,
   },
+  watch: {
+    '$store.state.url': function() {
+      this.initialTabPaint();
+    }
+  },
   beforeMount() {
-    this.testingConsole();
+    this.initialTabPaint();
+  },
+  updated() {
     this.initialTabPaint();
   },
 };

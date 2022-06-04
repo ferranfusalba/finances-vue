@@ -1,71 +1,44 @@
 <template>
-    <cv-header aria-label="Carbon header">
-        <!-- <cv-header-menu-button
+  <cv-header aria-label="Carbon header">
+    <!-- <cv-header-menu-button
           aria-label="Header menu"
           aria-controls="side-nav"
         /> -->
-        <cv-skip-to-content href="#main-content">
-          Skip to content
-        </cv-skip-to-content>
-        <cv-header-name to="/">Finances</cv-header-name>
-        <cv-header-nav aria-label="Carbon nav">
-          <cv-header-menu-item to="/global"> Global </cv-header-menu-item>
-          <cv-header-menu aria-label="Accounts" title="Accounts">
-            <cv-header-menu-item to="/accounts"> Overview </cv-header-menu-item>
-            <cv-header-menu-item to="/accounts/1">
-              Account 1
-            </cv-header-menu-item>
-            <cv-header-menu-item to="/accounts/2">
-              Account 2
-            </cv-header-menu-item>
-            <cv-header-menu-item to="/accounts/3">
-              Account 3
-            </cv-header-menu-item>
-          </cv-header-menu>
-          <cv-header-menu aria-label="Data" title="Data">
-            <cv-header-menu-item to="/data"> Overview </cv-header-menu-item>
-            <cv-header-menu-item href="javascript:void(0)">
-              by Month
-            </cv-header-menu-item>
-            <cv-header-menu-item href="javascript:void(0)">
-              by Year
-            </cv-header-menu-item>
-            <cv-header-menu-item href="javascript:void(0)">
-              All graphics
-            </cv-header-menu-item>
-          </cv-header-menu>
-        </cv-header-nav>
-        <template v-slot:header-global>
+    <cv-skip-to-content href="#main-content">
+      Skip to content
+    </cv-skip-to-content>
+    <cv-header-name to="/">Finances</cv-header-name>
+    <cv-header-nav aria-label="Carbon nav">
+      <cv-header-menu-item to="/global"> Global </cv-header-menu-item>
+      <cv-header-menu aria-label="Accounts" title="Accounts">
+        <cv-header-menu-item to="/accounts"> Overview </cv-header-menu-item>
+        <cv-header-menu-item to="/accounts/1"> Account 1 </cv-header-menu-item>
+        <cv-header-menu-item to="/accounts/2"> Account 2 </cv-header-menu-item>
+        <cv-header-menu-item to="/accounts/3"> Account 3 </cv-header-menu-item>
+      </cv-header-menu>
+      <cv-header-menu aria-label="Data" title="Data">
+        <cv-header-menu-item to="/data"> Overview </cv-header-menu-item>
+        <cv-header-menu-item href="javascript:void(0)">
+          by Month
+        </cv-header-menu-item>
+        <cv-header-menu-item href="javascript:void(0)">
+          by Year
+        </cv-header-menu-item>
+        <cv-header-menu-item href="javascript:void(0)">
+          All graphics
+        </cv-header-menu-item>
+      </cv-header-menu>
+    </cv-header-nav>
+    <!-- <template v-slot:header-global>
           <cv-header-global-action
             aria-label="Notifications"
             aria-controls="notifications-panel"
             @click="actionNotifications"
             label="Notifications"
             tipPosition="bottom"
-            tipAlignment="start"
-          >
-            <Notification20 />
-          </cv-header-global-action>
-          <cv-header-global-action
-            aria-label="User avatar"
-            @click="actionUserAvatar"
-            aria-controls="user-panel"
-            label="Log in"
-            tipPosition="bottom"
-            tipAlignment="center"
-          >
-            <UserAvatar20 v-if="loggedIn" />
-            <Login20 v-else />
-          </cv-header-global-action>
-          <cv-header-global-action
-            aria-label="App switcher"
-            aria-controls="switcher-panel"
-            @click="actionAppSwitcher"
-            label="App switcher"
-            tipPosition="bottom"
             tipAlignment="end"
           >
-            <AppSwitcher20 />
+            <Notification20 />
           </cv-header-global-action>
         </template>
         <template v-slot:left-panels v-if="areLeftPanels">
@@ -100,12 +73,29 @@
             </cv-side-nav-items>
           </cv-side-nav>
         </template>
-        <template v-slot:right-panels v-if="areRightPanels"> </template>
-      </cv-header>
+        <template v-slot:right-panels v-if="areRightPanels"> </template> -->
+  </cv-header>
 </template>
 
 <script>
+// import Notification20 from '@carbon/icons-vue/lib/notification/20'
+
 export default {
   name: "HeaderBar",
+  data() {
+    return {
+      // areLeftPanels: true,
+      // areRightPanels: false,
+    };
+  },
+  components: {
+    // Notification20,
+  },
+  methods: {
+    /*
+    actionNotifications() {
+      console.log('actionNotifications');
+    }, */
+  },
 };
 </script>

@@ -4,7 +4,9 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    url: String,
+  },
   getters: {
     isDesktop() {
       if (window.innerWidth >= 1056) {
@@ -16,8 +18,15 @@ export default new Vuex.Store({
     innerWidth() {
       return window.innerWidth;
     },
+    getActualRoute() {
+      return location.href;
+    }
   },
-  mutations: {},
+  mutations: {
+    CHANGE_URL: (state, data) => {
+      state.url = data;
+    }
+  },
   actions: {},
   modules: {},
 });

@@ -14,6 +14,7 @@
 <script>
 import HeaderBar from "@/components/HeaderBar.vue";
 import TabBar from "@/components/TabBar.vue";
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: "App",
@@ -21,11 +22,29 @@ export default {
     HeaderBar,
     TabBar,
   },
+  computed: {
+    ...mapState([
+      'url'
+    ])
+  },
   methods: {
     isDesktopBehave: function () {
       return this.$store.getters.isDesktop;
+    },
+    getRouteOnApp: function () {
+      return this.$store.getters.getActualRoute;
+    },
+    ...mapMutations([
+      'CHANGE_URL'
+    ]),
+    changeUrl(myURL) {
+      this.CHANGE_URL(myURL);
     }
-  }
+  },
+  updated() {
+    const url = location.href;
+    this.changeUrl(url);
+  },
 };
 </script>
 
