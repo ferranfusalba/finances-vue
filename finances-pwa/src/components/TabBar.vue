@@ -99,7 +99,7 @@ export default {
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  border-top: 1px solid black;
+  border-top: 1px solid #161616;
   height: 60px;
   align-items: center;
   position: absolute;
@@ -115,7 +115,7 @@ nav {
     background-color: white;
     color: black;
     &.active {
-      background-color: black;
+      background-color: #161616;
       * {
         color: white;
       }

@@ -1,14 +1,11 @@
 <template>
-    <ccv-pie-chart :data='data' :options='options'></ccv-pie-chart>
+  <ccv-pie-chart :data="data" :options="options"></ccv-pie-chart>
 </template>
 
 <script>
 import Vue from "vue";
 import "@carbon/charts/styles.css";
 import chartsVue from "@carbon/charts-vue";
-
-// IBM Plex should either be imported in your project by using Carbon
-// or consumed manually through an import
 import "../plex-and-carbon-components.css";
 
 Vue.use(chartsVue);
@@ -18,38 +15,23 @@ export default {
   components: {},
   data() {
     return {
-      data: [
-        {
-          group: "2V2N 9KYPM version 1",
-          value: 20000,
-        },
-        {
-          group: "L22I P66EP L22I P66EP L22I P66EP",
-          value: 65000,
-        },
-        {
-          group: "JQAI 2M4L1",
-          value: 75000,
-        },
-        {
-          group: "J9DZ F37AP",
-          value: 1200,
-        },
-        {
-          group: "YEL48 Q6XK YEL48",
-          value: 10000,
-        },
-        {
-          group: "Misc",
-          value: 25000,
-        },
-      ],
+      data: [],
       options: {
-        title: "Pie",
+        title: "Posició Global",
         resizable: true,
         height: "400px",
       },
     };
+  },
+  methods: {
+    returnData() {
+      for (let i = 0; i < this.$store.state.accounts.length; i++) {
+        this.data.push({group: this.$store.state.accounts[i].name, value:  this.$store.state.accounts[i].amount});
+      }
+    },
+  },
+  beforeMount() {
+    this.returnData();
   },
 };
 </script>

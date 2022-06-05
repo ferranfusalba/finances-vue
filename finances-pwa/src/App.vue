@@ -31,9 +31,6 @@ export default {
     isDesktopBehave: function () {
       return this.$store.getters.isDesktop;
     },
-    getRouteOnApp: function () {
-      return this.$store.getters.getActualRoute;
-    },
     ...mapMutations([
       'CHANGE_URL'
     ]),

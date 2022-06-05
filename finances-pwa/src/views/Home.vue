@@ -1,35 +1,57 @@
 <template>
   <div class="home">
-    <Label label="Home"/>
+    <Label label="Home" />
+    <h5>Welcome, {{ name }}</h5>
     <div>
       <div class="h_global">
         <div class="left">
-          <cv-button :icon="Globe20">Global</cv-button>
+          <cv-button :icon="Globe20" @click="goTo('/global')">Global</cv-button>
         </div>
         <div class="right"></div>
       </div>
       <div class="h_accounts">
         <div class="left">
-          <cv-button :icon="Currency20">Accounts</cv-button>
+          <cv-button :icon="Currency20" @click="goTo('/accounts')"
+            >Accounts</cv-button
+          >
         </div>
         <div class="right">
-          <cv-button :icon="Currency20" kind="tertiary" @click="goTo('/accounts/bbva')">BBVA</cv-button>
-          <cv-button :icon="Currency20" kind="tertiary" @click="goTo('/accounts/andbank')">Andbank</cv-button>
+          <div v-for="(item, index) in accounts" :key="index">
+            <cv-button
+              :icon="Currency20"
+              kind="tertiary"
+              @click="goTo(accounts[index].route)"
+              >{{ accounts[index].name }}</cv-button
+            >
+          </div>
         </div>
       </div>
       <div class="h_data">
         <div class="left">
-          <cv-button :icon="ChartLineData20">Data</cv-button>
+          <cv-button :icon="ChartLineData20" @click="goTo('/data')"
+            >Data</cv-button
+          >
         </div>
         <div class="right">
-          <cv-button :icon="ChartLineData20" kind="tertiary">Settings</cv-button>
-          <cv-button :icon="ChartLineData20" kind="tertiary">Settings</cv-button>
-          <cv-button :icon="ChartLineData20" kind="tertiary">Settings</cv-button>
+          <cv-button :icon="ChartLineData20" kind="tertiary"
+            >Settings</cv-button
+          >
+          <cv-button :icon="ChartLineData20" kind="tertiary"
+            >Settings</cv-button
+          >
+          <cv-button :icon="ChartLineData20" kind="tertiary"
+            >Settings</cv-button
+          >
         </div>
       </div>
       <div class="h_settings">
         <div class="left">
-          <cv-button :icon="Settings20" kind="secondary">Settings</cv-button>
+          <cv-button
+            :icon="Settings20"
+            kind="secondary"
+            @click="goTo('/settings')"
+            >Settings</cv-button
+          >
         </div>
         <div class="right"></div>
       </div>
@@ -42,11 +64,17 @@ import Globe20 from "@carbon/icons-vue/lib/globe/20";
 import Currency20 from "@carbon/icons-vue/lib/currency/20";
 import ChartLineData20 from "@carbon/icons-vue/lib/chart--line--data/20";
 import Settings20 from "@carbon/icons-vue/lib/settings/20";
-import router from '../router'
+import router from "../router";
 import Label from "../components/Label.vue";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      name: this.$store.state.name,
+      accounts: this.$store.state.accounts
+    };
+  },
   computed: {
     Globe20() {
       return Globe20;
@@ -64,18 +92,21 @@ export default {
   methods: {
     goTo(route) {
       router.push(route);
-    }
+    },
   },
   components: {
-    Label
-  }
+    Label,
+  },
 };
 </script>
 
 <style lang="scss">
 .home {
   padding-bottom: 70px;
-  div:nth-child(2) {
+  h5 {
+    margin: 10px 0;
+  }
+  div:nth-child(3) {
     display: flex;
     flex-direction: column;
     .left,
@@ -90,6 +121,9 @@ export default {
     }
     .right {
       padding-left: 5px;
+      div {
+        display: contents;
+      }
     }
     .h_global,
     .h_accounts,

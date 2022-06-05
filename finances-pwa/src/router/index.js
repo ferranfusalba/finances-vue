@@ -6,6 +6,8 @@ import Global from '../views/Global.vue'
 import Accounts from '../views/Accounts.vue'
 import Account_BBVA from '../views/BBVA.vue'
 import Account_Andbank from '../views/Andbank.vue'
+import Account_N26 from '../views/N26.vue'
+import Account_Revolut from '../views/Revolut.vue'
 import Data from '../views/Data.vue'
 import Settings from '../views/Settings.vue'
 
@@ -46,6 +48,16 @@ const routes = [
         path: 'andbank',
         name: 'Andbank',
         component: Account_Andbank,
+      },
+      {
+        path: 'n26',
+        name: 'N26',
+        component: Account_N26,
+      },
+      {
+        path: 'revolut',
+        name: 'Revolut',
+        component: Account_Revolut,
       },
     ]
   },

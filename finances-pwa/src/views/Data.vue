@@ -1,19 +1,19 @@
 <template>
   <div class="data">
     <Label label="Data"/>
-    <Chart/>
+    <Bar/>
   </div>
 </template>
 
 <script>
 import Label from "../components/Label.vue";
-import Chart from "../components/Chart.vue";
+import Bar from "../components/Bar.vue";
 
 export default {
   name: "Data",
   components: {
     Label,
-    Chart
+    Bar
   },
 };
 </script>
