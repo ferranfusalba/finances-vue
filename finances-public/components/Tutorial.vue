@@ -9,7 +9,7 @@
       <br>
       <h1 class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-2xl leading-7 font-semibold">Finances</h1>
       <a href="https://app.getfinances.app/" target="_blank" class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-400">App</a>
-      <a href="https://dev.getfinances.app/" class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-400">dev env</a>
+      <a href="https://minting.getfinances.app/" class="flex justify-center pt-8 sm:pt-0 mt-4 pt-4 text-gray-400">minting</a>
        <!--
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
         <h2 class="text-2xl leading-7 font-semibold">
