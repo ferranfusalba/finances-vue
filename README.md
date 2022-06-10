@@ -4,7 +4,7 @@ PROD environment:
 [Public](https://getfinances.app/) | [PWA](https://app.getfinances.app/)
 
 TEST environment:
-[Public](https://dev.getfinances.app/) | [PWA](https://dev.app.getfinances.app/)
+[Public](https://minting.getfinances.app/) | [PWA](https://minting.app.getfinances.app/)
 
 ```bash
 |-- finances-vue
