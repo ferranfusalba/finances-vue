@@ -1,17 +1,23 @@
 <template>
   <div class="data">
-    <HorizontalScrollData />
+    <SausageMenuAccountsData :itemStore="this.$store.state.data" :iconName="Globe20" />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HorizontalScrollData from "@/components/HorizontalScrollData.vue";
+import SausageMenuAccountsData from "@/components/SausageMenuAccountsData.vue";
+import Globe20 from '@carbon/icons-vue/es/globe/20';
 
 export default {
   name: "Data",
   components: {
-    HorizontalScrollData
+    SausageMenuAccountsData
+  },
+  computed: {
+    Globe20() {
+      return Globe20;
+    },
   },
 };
 </script>

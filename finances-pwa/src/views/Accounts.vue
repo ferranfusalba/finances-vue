@@ -1,13 +1,14 @@
 <template>
   <div class="accounts">
-    <HorizontalScrollAccounts />
+    <SausageMenuAccountsData :itemStore="this.$store.state.accounts" :iconName="Currency20" />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import router from "../router";
-import HorizontalScrollAccounts from "@/components/HorizontalScrollAccounts.vue";
+import SausageMenuAccountsData from "@/components/SausageMenuAccountsData.vue";
+import Currency20 from "@carbon/icons-vue/lib/currency/20";
 
 export default {
   name: "Accounts",
@@ -17,7 +18,12 @@ export default {
     },
   },
   components: {
-    HorizontalScrollAccounts,
+    SausageMenuAccountsData,
+  },
+  computed: {
+    Currency20() {
+      return Currency20;
+    },
   },
 };
 </script>
@@ -25,14 +31,5 @@ export default {
 <style lang="scss">
 .accounts {
   padding-bottom: 70px;
-  .selectAccounts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    * {
-      margin: 5px 0;
-      width: 100%;
-    }
-  }
 }
 </style>
