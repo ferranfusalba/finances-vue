@@ -1,5 +1,5 @@
 <template>
-  <Flicking :options="{ moveType: 'freeScroll', bound: true }">
+  <Flicking :options="{ moveType: 'freeScroll', bound: true, horizontal: true }">
       <div v-for="item in this.$store.state.accounts" :key="item">
         <cv-button :icon="Currency20" @click="goTo(item.route)">
           {{ item.name }}
