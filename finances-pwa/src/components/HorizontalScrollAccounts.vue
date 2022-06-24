@@ -1,4 +1,4 @@
-<template>
+<template class="row">
   <Flicking :options="{ moveType: 'freeScroll', bound: true }">
     <div
       v-for="item in this.$store.state.accounts"
