@@ -1,10 +1,14 @@
 <template>
-  <Flicking :options="{ moveType: 'freeScroll', bound: true, horizontal: true }">
-      <div v-for="item in this.$store.state.accounts" :key="item">
+  <Flicking :options="{ moveType: 'freeScroll', bound: true }">
+    <!-- <div v-for="item in this.$store.state.accounts" :key="item">
         <cv-button :icon="Currency20" @click="goTo(item.route)">
           {{ item.name }}
         </cv-button>
-      </div>
+      </div> -->
+    <span class="button mr-2 is-white">🍎 Apple</span>
+    <span class="button mr-2 is-white">🍉 Watermelon</span>
+    <span class="button mr-2 is-white">🥝 Kiwi</span>
+    <span class="button mr-2 is-white">...</span>
   </Flicking>
 </template>
 
