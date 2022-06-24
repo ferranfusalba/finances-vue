@@ -1,17 +1,10 @@
 <template>
   <Flicking :options="{ moveType: 'freeScroll', bound: true }">
-    <div class="row">
-<div
-      v-for="item in this.$store.state.accounts"
-      :key="item"
-      class="row"
-    >
-      <cv-button :icon="Currency20" @click="goTo(item.route)">
-        {{ item.name }}
-      </cv-button>
-      <div style="width: 4px"></div>
-    </div>
-    </div>
+      <div v-for="item in this.$store.state.accounts" :key="item">
+        <cv-button :icon="Currency20" @click="goTo(item.route)">
+          {{ item.name }}
+        </cv-button>
+      </div>
   </Flicking>
 </template>
 
@@ -38,10 +31,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.row {
-  display: flex;
-  flex-direction: row;
-}
-</style>
