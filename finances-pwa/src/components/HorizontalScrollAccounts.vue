@@ -8,7 +8,12 @@
     <span class="button mr-2 is-white">🍎 Apple</span>
     <span class="button mr-2 is-white">🍉 Watermelon</span>
     <span class="button mr-2 is-white">🥝 Kiwi</span>
-    <span class="button mr-2 is-white">...</span>
+    <span class="button mr-2 is-white">🍎 Apple</span>
+    <span class="button mr-2 is-white">🍉 Watermelon</span>
+    <span class="button mr-2 is-white">🥝 Kiwi</span>
+    <span class="button mr-2 is-white">🍎 Apple</span>
+    <span class="button mr-2 is-white">🍉 Watermelon</span>
+    <span class="button mr-2 is-white">🥝 Kiwi</span>
   </Flicking>
 </template>
 
