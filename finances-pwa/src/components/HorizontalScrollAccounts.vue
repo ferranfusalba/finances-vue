@@ -3,7 +3,7 @@
     <div
       v-for="item in this.$store.state.accounts"
       :key="item"
-      style="display: flex; flex-direction: row"
+      class="row"
     >
       <cv-button :icon="Currency20" @click="goTo(item.route)">
         {{ item.name }}
@@ -36,3 +36,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.row {
+  display: flex;
+  flex-direction: row;
+}
+</style>
