@@ -1,25 +1,22 @@
 <template>
-  <div class="global">
-    <Label label="Global"/>
-    <Chart/>
+  <div class="budget">
+     <Label label="Budget"/>
   </div>
 </template>
 
 <script>
 import Label from "../components/Label.vue";
-import Chart from "../components/Chart.vue";
 
 export default {
-  name: 'Global',
+  name: 'Budget',
   components: {
-    Label,
-    Chart
+    Label
   }
 }
 </script>
 
 <style lang="scss">
-.global {
+.budget {
   padding-bottom: 70px;
 }
 </style>

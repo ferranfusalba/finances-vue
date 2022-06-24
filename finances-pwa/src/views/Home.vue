@@ -3,9 +3,9 @@
     <Label label="Home" />
     <h5>Welcome, {{ name }}</h5>
     <div>
-      <div class="h_global">
+      <div class="h_budget">
         <div class="left">
-          <cv-button :icon="Globe20" @click="goTo('/global')">Global</cv-button>
+          <cv-button :icon="TableBuilt20" @click="goTo('/budget')">Budget</cv-button>
         </div>
         <div class="right"></div>
       </div>
@@ -18,6 +18,7 @@
         <div class="right">
           <div v-for="(item, index) in accounts" :key="index">
             <cv-button
+            style="margin-bottom: 4px;"
               :icon="Currency20"
               kind="tertiary"
               @click="goTo(accounts[index].route)"
@@ -33,15 +34,15 @@
           >
         </div>
         <div class="right">
-          <cv-button :icon="ChartLineData20" kind="tertiary"
-            >Settings</cv-button
-          >
-          <cv-button :icon="ChartLineData20" kind="tertiary"
-            >Settings</cv-button
-          >
-          <cv-button :icon="ChartLineData20" kind="tertiary"
-            >Settings</cv-button
-          >
+          <div v-for="(item, index) in data" :key="index">
+            <cv-button
+            style="margin-bottom: 4px;"
+              :icon="ChartLineData20"
+              kind="tertiary"
+              @click="goTo(data[index].route)"
+              >{{ data[index].name }}</cv-button
+            >
+          </div>
         </div>
       </div>
       <div class="h_settings">
@@ -60,7 +61,7 @@
 </template>
 
 <script>
-import Globe20 from "@carbon/icons-vue/lib/globe/20";
+import TableBuilt20 from "@carbon/icons-vue/lib/table--built/20";
 import Currency20 from "@carbon/icons-vue/lib/currency/20";
 import ChartLineData20 from "@carbon/icons-vue/lib/chart--line--data/20";
 import Settings20 from "@carbon/icons-vue/lib/settings/20";
@@ -72,12 +73,13 @@ export default {
   data() {
     return {
       name: this.$store.state.name,
-      accounts: this.$store.state.accounts
+      accounts: this.$store.state.accounts,
+      data: this.$store.state.data
     };
   },
   computed: {
-    Globe20() {
-      return Globe20;
+    TableBuilt20() {
+      return TableBuilt20;
     },
     Currency20() {
       return Currency20;
@@ -125,7 +127,7 @@ export default {
         display: contents;
       }
     }
-    .h_global,
+    .h_budget,
     .h_accounts,
     .h_data,
     .h_settings {

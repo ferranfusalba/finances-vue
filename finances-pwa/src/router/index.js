@@ -2,13 +2,18 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/LogIn.vue'
-import Global from '../views/Global.vue'
+import Budget from '../views/Budget.vue'
 import Accounts from '../views/Accounts.vue'
-import Account_BBVA from '../views/BBVA.vue'
-import Account_Andbank from '../views/Andbank.vue'
-import Account_N26 from '../views/N26.vue'
-import Account_Revolut from '../views/Revolut.vue'
+import Account_BBVA from '../views/Accounts_Children/BBVA.vue'
+import Account_Andbank from '../views/Accounts_Children/Andbank.vue'
+import Account_N26 from '../views/Accounts_Children/N26.vue'
+import Account_Revolut from '../views/Accounts_Children/Revolut.vue'
+import Account_Bankinter from '../views/Accounts_Children/Bankinter.vue'
 import Data from '../views/Data.vue'
+import Global from '../views/Data_Children/Global.vue'
+import Mensual from '../views/Data_Children/Mensual.vue'
+import Anual from '../views/Data_Children/Anual.vue'
+import Balance from '../views/Data_Children/Balance.vue'
 import Settings from '../views/Settings.vue'
 
 Vue.use(VueRouter)
@@ -25,9 +30,9 @@ const routes = [
     component: Login
   },
   {
-    path: '/global',
-    name: 'Global',
-    component: Global
+    path: '/budget',
+    name: 'Budget',
+    component: Budget
   },
   {
     path: '/bbva',
@@ -59,12 +64,39 @@ const routes = [
         name: 'Revolut',
         component: Account_Revolut,
       },
+      {
+        path: 'bankinter',
+        name: 'Bankinter',
+        component: Account_Bankinter,
+      },
     ]
   },
   {
     path: '/data',
     name: 'Data',
-    component: Data
+    component: Data,
+    children: [
+      {
+        path: 'global',
+        name: 'Global',
+        component: Global
+      },
+      {
+        path: 'mensual',
+        name: 'Mensual',
+        component: Mensual
+      },
+      {
+        path: 'anual',
+        name: 'Anual',
+        component: Anual
+      },
+      {
+        path: 'balance',
+        name: 'Balance',
+        component: Balance
+      },
+    ]
   },
   {
     path: '/settings',

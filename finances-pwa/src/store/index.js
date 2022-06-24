@@ -36,7 +36,40 @@ export default new Vuex.Store({
         route: "/accounts/revolut",
         amount: 564,
       },
+      {
+        id: 5,
+        name: "Bankinter",
+        icon: "Currency20",
+        route: "/accounts/bankinter",
+        amount: 3000,
+      },
     ],
+    data: [
+      {
+        id: 1,
+        name: "Global",
+        icon: "Globe20",
+        route: "/data/global",
+      },
+      {
+        id: 2,
+        name: "Mensual",
+        icon: "Globe20",
+        route: "/data/mensual",
+      },
+      {
+        id: 3,
+        name: "Anual",
+        icon: "Globe20",
+        route: "/data/anual",
+      },
+      {
+        id: 4,
+        name: "Balance",
+        icon: "Globe20",
+        route: "/data/balance",
+      },
+    ]
   },
   getters: {
     isDesktop() {

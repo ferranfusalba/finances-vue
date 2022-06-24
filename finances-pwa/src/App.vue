@@ -6,6 +6,7 @@
     </div>
     <router-view />
     <div class="mobile">
+      <!-- <HorizontalScroll /> -->
       <TabBar />
     </div>
   </div>
@@ -13,6 +14,7 @@
 
 <script>
 import HeaderBar from "@/components/HeaderBar.vue";
+// import HorizontalScroll from "@/components/HorizontalScroll.vue";
 import TabBar from "@/components/TabBar.vue";
 import { mapState, mapMutations } from 'vuex'
 
@@ -20,6 +22,7 @@ export default {
   name: "App",
   components: {
     HeaderBar,
+    // HorizontalScroll,
     TabBar,
   },
   computed: {

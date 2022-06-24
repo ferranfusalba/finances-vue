@@ -1,56 +1,24 @@
 <template>
   <div class="accounts">
+    <HorizontalScrollAccounts />
     <router-view></router-view>
-    <Label label="Accounts"/>
-    <div class="selectAccounts">
-      <cv-button
-        :icon="Currency20"
-        kind="tertiary"
-        @click="goTo('/accounts/bbva')"
-        >BBVA</cv-button
-      >
-      <cv-button
-        :icon="Currency20"
-        kind="tertiary"
-        @click="goTo('/accounts/andbank')"
-        >Andbank</cv-button
-      >
-    </div>
   </div>
 </template>
 
 <script>
-import Globe20 from "@carbon/icons-vue/lib/globe/20";
-import Currency20 from "@carbon/icons-vue/lib/currency/20";
-import ChartLineData20 from "@carbon/icons-vue/lib/chart--line--data/20";
-import Settings20 from "@carbon/icons-vue/lib/settings/20";
 import router from "../router";
-import Label from "../components/Label.vue";
+import HorizontalScrollAccounts from "@/components/HorizontalScrollAccounts.vue";
 
 export default {
   name: "Accounts",
-  computed: {
-    Globe20() {
-      return Globe20;
-    },
-    Currency20() {
-      return Currency20;
-    },
-    ChartLineData20() {
-      return ChartLineData20;
-    },
-    Settings20() {
-      return Settings20;
-    },
-  },
   methods: {
     goTo(route) {
       router.push(route);
     },
   },
   components: {
-    Label
-  }
+    HorizontalScrollAccounts,
+  },
 };
 </script>
 

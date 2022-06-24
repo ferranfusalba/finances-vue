@@ -24,9 +24,9 @@ export default {
         { id: "1", to: "/", title: "Home", iconComponent: "Home20" },
         {
           id: "2",
-          to: "/global",
-          title: "Global",
-          iconComponent: "Globe20",
+          to: "/budget",
+          title: "Budget",
+          iconComponent: "TableBuilt20",
         },
         {
           id: "3",
@@ -56,7 +56,7 @@ export default {
     },
     initialTabPaint: function () {
       let locationPathname = window.location.pathname;
-      let locationPathnamePosition2 = locationPathname.search("global");
+      let locationPathnamePosition2 = locationPathname.search("budget");
       let locationPathnamePosition3 = locationPathname.search("accounts");
       let locationPathnamePosition4 = locationPathname.search("data");
       let locationPathnamePosition5 = locationPathname.search("settings");

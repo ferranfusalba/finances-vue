@@ -1,19 +1,17 @@
 <template>
   <div class="data">
-    <Label label="Data"/>
-    <Bar/>
+    <HorizontalScrollData />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Label from "../components/Label.vue";
-import Bar from "../components/Bar.vue";
+import HorizontalScrollData from "@/components/HorizontalScrollData.vue";
 
 export default {
   name: "Data",
   components: {
-    Label,
-    Bar
+    HorizontalScrollData
   },
 };
 </script>

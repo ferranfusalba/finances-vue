@@ -23,6 +23,7 @@ import CarbonComponentsVue from '@carbon/vue/src/index';
 import { CarbonIconsVue } from '@carbon/icons-vue';
 import Home20 from '@carbon/icons-vue/es/home/20';
 import Globe20 from '@carbon/icons-vue/es/globe/20';
+import TableBuilt20 from '@carbon/icons-vue/es/table--built/20';
 import Currency20 from '@carbon/icons-vue/es/currency/20';
 import ChartLineData20 from '@carbon/icons-vue/es/chart--line--data/20';
 import Settings20 from '@carbon/icons-vue/es/settings/20';
@@ -44,6 +45,7 @@ Vue.use(CarbonComponentsVue).use(CarbonIconsVue, {
   components: {
     Home20,
     Globe20,
+    TableBuilt20,
     Currency20,
     ChartLineData20,
     Settings20,
