@@ -1,6 +1,7 @@
-<template class="row">
+<template>
   <Flicking :options="{ moveType: 'freeScroll', bound: true }">
-    <div
+    <div class="row">
+<div
       v-for="item in this.$store.state.accounts"
       :key="item"
       class="row"
@@ -9,6 +10,7 @@
         {{ item.name }}
       </cv-button>
       <div style="width: 4px"></div>
+    </div>
     </div>
   </Flicking>
 </template>
