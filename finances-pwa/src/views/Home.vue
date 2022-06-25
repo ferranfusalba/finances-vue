@@ -104,6 +104,7 @@ export default {
 
 <style lang="scss">
 .home {
+  margin-top: 60px;
   padding-bottom: 70px;
   h5 {
     margin: 10px 0;

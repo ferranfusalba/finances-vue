@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss">
 .budget {
+  margin-top: 60px;
   padding-bottom: 70px;
 }
 </style>

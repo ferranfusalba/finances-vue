@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss">
 .settings {
+  margin-top: 60px;
   padding-bottom: 70px;
 }
 </style>

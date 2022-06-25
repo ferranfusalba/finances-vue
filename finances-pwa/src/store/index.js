@@ -53,15 +53,15 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        name: "Mensual",
+        name: "Month By Month",
         icon: "Globe20",
-        route: "/data/mensual",
+        route: "/data/month-by-month",
       },
       {
         id: 3,
-        name: "Anual",
+        name: "Year By Year",
         icon: "Globe20",
-        route: "/data/anual",
+        route: "/data/year-by-year",
       },
       {
         id: 4,

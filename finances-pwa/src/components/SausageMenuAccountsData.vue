@@ -32,6 +32,7 @@ export default {
 <style scoped lang="scss">
 .sausage-links {
   position: relative;
+  margin-top: 48px;
 /*
   &:before,
   &:after {

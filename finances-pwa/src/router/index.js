@@ -11,8 +11,8 @@ import Account_Revolut from '../views/Accounts_Children/Revolut.vue'
 import Account_Bankinter from '../views/Accounts_Children/Bankinter.vue'
 import Data from '../views/Data.vue'
 import Global from '../views/Data_Children/Global.vue'
-import Mensual from '../views/Data_Children/Mensual.vue'
-import Anual from '../views/Data_Children/Anual.vue'
+import MonthByMonth from '../views/Data_Children/MonthByMonth.vue'
+import YearByYear from '../views/Data_Children/YearByYear.vue'
 import Balance from '../views/Data_Children/Balance.vue'
 import Settings from '../views/Settings.vue'
 
@@ -82,14 +82,14 @@ const routes = [
         component: Global
       },
       {
-        path: 'mensual',
-        name: 'Mensual',
-        component: Mensual
+        path: 'month-by-month',
+        name: 'MonthByMonth',
+        component: MonthByMonth
       },
       {
-        path: 'anual',
-        name: 'Anual',
-        component: Anual
+        path: 'year-by-year',
+        name: 'YearByYear',
+        component: YearByYear
       },
       {
         path: 'balance',
