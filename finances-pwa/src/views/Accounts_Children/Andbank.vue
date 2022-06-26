@@ -1,17 +1,17 @@
 <template>
-<div>
-    <Label label="Andbank"/>
+  <div>
+    <Label label="Andbank" />
     <p>Andbank</p>
-</div>
+  </div>
 </template>
 
 <script>
 import Label from "../../components/Label.vue";
 
 export default {
-  name: 'Andbank',
+  name: "Andbank",
   components: {
-    Label
-  }
-}
+    Label,
+  },
+};
 </script>

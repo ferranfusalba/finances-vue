@@ -42,37 +42,37 @@ export default {
         {
           group: "Income",
           key: "'23",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'24",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'25",
-          value: 2300,
+          value: 0,
         },
         {
           group: "Income",
           key: "'26",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'27",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'28",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'29",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Expenses",
@@ -92,37 +92,37 @@ export default {
         {
           group: "Expenses",
           key: "'23",
-          value: -990,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'24",
-          value: -995,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'25",
-          value: -1070,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'26",
-          value: -1040,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'27",
-          value: -860,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'28",
-          value: -1060,
+          value: -0,
         },
         {
           group: "Expenses",
           key: "'29",
-          value: -910,
+          value: -0,
         },
       ],
       optionsGrouped: {
@@ -137,6 +137,11 @@ export default {
           },
         },
         height: "400px",
+        color: {
+          pairing: {
+            option: 5,
+          }
+        }
       },
             dataGroupedCompared: [
         {
@@ -157,37 +162,37 @@ export default {
         {
           group: "Income",
           key: "'23",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'24",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'25",
-          value: 2300,
+          value: 0,
         },
         {
           group: "Income",
           key: "'26",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'27",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'28",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Income",
           key: "'29",
-          value: 1485,
+          value: 0,
         },
         {
           group: "Expenses",
@@ -207,37 +212,37 @@ export default {
         {
           group: "Expenses",
           key: "'23",
-          value: 990,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'24",
-          value: 995,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'25",
-          value: 1070,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'26",
-          value: 1040,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'27",
-          value: 860,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'28",
-          value: 1060,
+          value: 0,
         },
         {
           group: "Expenses",
           key: "'29",
-          value: 910,
+          value: 0,
         },
       ],
       optionsGroupedCompared: {
@@ -252,6 +257,11 @@ export default {
           },
         },
         height: "400px",
+        color: {
+          pairing: {
+            option: 2,
+          }
+        }
       }, /*
             dataGroupedCompared: [
         {

@@ -1,11 +1,24 @@
 <template>
   <div>
     <Label label="BBVA" />
+    <cv-modal ref="mobileModal" close-aria-label="Close" size="xs">
+      <template v-if="use_label" slot="label">Label of modal</template>
+      <template v-if="use_title" slot="title">Add a transaction</template>
+      <template v-if="use_content" slot="content"
+        ><p>
+          Soon!
+        </p></template
+      >
+    </cv-modal>
+    <cv-button kind="tertiary" @click="openModal">
+      Add Transaction
+    </cv-button>
     <cv-data-table
       :columns="columns"
       :pagination="basicPagination"
       :has-expand-all="hasExpandAll"
       ref="table"
+      :sortable="sortable"
     >
       <template v-if="use_expandingSlottedData" slot="data">
         <cv-data-table-row
@@ -16,16 +29,39 @@
           aria-label-expand-row="Go large"
           aria-label-collapse-row="Go small"
         >
-          <cv-data-table-cell
+          <!-- <cv-data-table-cell
             v-for="(cell, cellIndex) in row"
             :key="`${cellIndex}`"
             :value="`${cellIndex}`"
             v-html="cell"
-          ></cv-data-table-cell>
-          <template slot="expandedContent"
-            >A variety of content types can live here. Be sure to follow Carbon
-            design guidelines for spacing and alignment.</template
           >
+          </cv-data-table-cell> -->
+          <cv-data-table-cell> {{ row.date }} </cv-data-table-cell>
+          <cv-data-table-cell> {{ row.name }} </cv-data-table-cell>
+          <cv-data-table-cell> {{ row.amount }} </cv-data-table-cell>
+          <cv-data-table-cell> {{ row.balance }} </cv-data-table-cell>
+          <cv-data-table-cell
+            ><cv-tag kind="red" :label="row.category" />
+          </cv-data-table-cell>
+          <cv-data-table-cell>
+            <cv-overflow-menu flip-menu style="margin: 0 auto">
+              <cv-overflow-menu-item>Edit</cv-overflow-menu-item>
+              <cv-overflow-menu-item kind="danger">Delete</cv-overflow-menu-item>
+            </cv-overflow-menu>
+          </cv-data-table-cell>
+          <template slot="expandedContent"
+            ><small>Reference:</small>
+            <br>
+            <small>Transaction Type:</small>
+            <br>
+            <small>Amount in Foreign Currency:</small>
+            <br>
+            <small>Type of Foreign Currency:</small>
+            <br>
+            <small>Exchange Rate:</small>
+            <br>
+            <small>Observations:</small>
+          </template>
         </cv-data-table-row>
       </template></cv-data-table
     >
@@ -34,39 +70,47 @@
 
 <script>
 import Label from "../../components/Label.vue";
+import { CvModal } from "@carbon/vue/src/components/cv-modal";
 
 export default {
   name: "BBVA",
   components: {
     Label,
+    CvModal,
+  },
+  methods: {
+    openModal() {
+      this.$refs.mobileModal.show();
+    },
   },
   data() {
     return {
-      columns: [
-        "Name",
-        "Protocol",
-        "Port",
-        "Rule",
-        "Attached Groups",
-        "Status",
-      ],
+      // Modal
+      use_label: false,
+      use_title: true,
+      use_content: true,
+      visible: false,
+      autoHideOff: false,
+      "sortable": true,
+      // Table
+      columns: ["Date", "Payee", "Amount", "Balance", "Category", "Options"],
       data: [
-        [
-          "Load Balancer 11",
-          "HTTP",
-          "80",
-          "Round Robin",
-          "Maureen’s VM Groups",
-          "Active",
-        ],
-        [
-          "Load Balancer 4",
-          "HTTP",
-          "81",
-          "Round Robin",
-          "Maureen’s VM Groups",
-          "Active",
-        ],
+        {
+          date: "27/06/22",
+          name: "Parking Pizza Londres",
+          amount: "11,95 €",
+          balance: "0,05 €",
+          category: "Restaurants",
+          options: "Select",
+        },
+        {
+          date: "26/06/22",
+          name: "Syra Coffee Londres",
+          amount: "3,50 €",
+          balance: "12,00 €",
+          category: "Coffee Shops",
+          options: "Select",
+        } /*
         [
           "Load Balancer 2",
           "HTTP",
@@ -170,7 +214,7 @@ export default {
           "Round Robin",
           "John’s VM Groups",
           "Active",
-        ],
+        ], */,
       ],
       basicPagination: false,
       use_expandingSlottedData: true,

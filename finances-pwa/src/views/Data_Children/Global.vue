@@ -4,9 +4,9 @@
     <Pie :optionsGlobal="optionsAccounts"/>
     <br>
     <br>
-    <Meter />
+    <!-- <Meter />
     <br>
-    <br>
+    <br> -->
     <Pie :optionsGlobal="optionsSectors"/>
     <!-- <br>
     <br>
@@ -17,14 +17,14 @@
 <script>
 import Label from "@/components/Label.vue";
 import Pie from "@/components/Data_Charts/Pie.vue";
-import Meter from "@/components/Data_Charts/Meter.vue";
+// import Meter from "@/components/Data_Charts/Meter.vue";
 
 export default {
   name: 'Global',
   components: {
     Label,
     Pie,
-    Meter
+    // Meter
   },
   data() {
     return {

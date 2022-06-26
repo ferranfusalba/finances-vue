@@ -163,12 +163,12 @@ export default {
         },
         height: "400px",
         color: {
-           'Income': 'blue',
-            'Expenses': 'red' /*
+          // 'Income': 'blue',
+          // 'Expenses': 'red'
           pairing: {
-            numberOfVariants: 2,
-            option: 3,
-          } */
+            // numberOfVariants: 2,
+            option: 4,
+          }
         }
       },
             dataGroupedCompared: [
@@ -621,6 +621,11 @@ export default {
           },
         },
         height: "400px",
+        color: {
+          pairing: {
+            option: 2,
+          }
+        }
       },
     };
   },
